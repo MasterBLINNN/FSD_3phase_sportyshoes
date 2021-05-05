@@ -46,7 +46,7 @@ public class LoginController {
     	}
     	catch(Exception ex) {
     		model.addAttribute("message", "ERROR: Unknown user!");
-    		return("users");
+    		return("login");
     	}
     	
     	if (userService.ConfirmUserPassword(user, password)) {
@@ -57,7 +57,7 @@ public class LoginController {
     	}
     	else {
     		model.addAttribute("message", "Invalid Password, Try again!");
-    		return("users");
+    		return("login");
     	}
     }
    	
